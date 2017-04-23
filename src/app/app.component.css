@@ -1,0 +1,22 @@
+select {
+  text-transform: capitalize;
+}
+
+.light {
+  height: 120px;
+  width: 120px;
+  background: #f8f8f8;
+  border: 2px solid #d8d8d8;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: lightgrey;
+  cursor: pointer;
+}
+
+.light-on {
+  color: #87cff1;
+  box-shadow: 0 0 8px 0 #80d6ff;
+  border: 2px solid #a9e3ff;
+}
