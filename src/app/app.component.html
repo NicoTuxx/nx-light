@@ -1,3 +1,16 @@
-<h1>
-  {{title}}
-</h1>
+<div class="vertical-center horizontal-center">
+  <div *ngIf="false">
+    <select [(ngModel)]="selectedProcess">
+      <option *ngFor="let obj of processList" [ngValue]="obj.code">{{obj.label}}</option>
+    </select>
+    <select [(ngModel)]="selectedLight">
+        <option value="">Toutes</option>
+        <option value="Venus">Venus</option>
+    </select>
+    <button (click)="sendProcess(selectedProcess, selectedLight)" *ngIf="selectedProcess" class="btn btn-lg btn-primary">Envoyer</button>
+  </div>
+
+  <div [ngClass]="{'light': true, 'light-on': lightOn}" (click)="toggleLight('Venus')">
+    <span class="fa fa-lightbulb-o fa-5x"></span>
+  </div>
+</div>
